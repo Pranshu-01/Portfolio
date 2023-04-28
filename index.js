@@ -9,6 +9,10 @@ app.use('/css',express.static(path.join(__dirname,'public/css')));
 
 app.use('/router',router);
 
+app.get('/',(req,res)=>{
+    res.redirect('/router');
+})
+
 app.listen(port,()=>{
     console.log('Server Running');
 })
